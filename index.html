@@ -17,7 +17,7 @@
         header {
             padding: 20px 0;
         }
-        header .wrapper {
+        .wrapper {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -29,6 +29,14 @@
             color: #f9faf8;
             text-decoration: none;
             padding: 0 10px;
+        }
+        .hero {
+            padding: 4em 0;
+        }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: bolder;
+            color: #f9faf8
         }
     </style>
 </head>
@@ -47,13 +55,15 @@
     </header>
     <main>
         <article class="hero">
-            <div class="left">
-                <h1>This website is awesome</h1>
-                <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
-                <button>Sign up</button>
-            </div>
-            <div class="right">
-                <img src="https://place-hold.it/400x200" alt="">
+            <div class="wrapper">
+                <div class="left">
+                    <h1>This website is awesome</h1>
+                    <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
+                    <button>Sign up</button>
+                </div>
+                <div class="right">
+                    <img src="https://place-hold.it/400x200" alt="">
+                </div>
             </div>
         </article>
     </main>
