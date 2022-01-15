@@ -11,64 +11,201 @@
             margin: 0;
             font-family: 'Roboto', sans-serif;
         }
-        header, .hero {
-            background-color: #1F2937;
-        }
-        header {
-            padding: 20px 0;
-        }
-        .wrapper {
+        
+        header, .hero, footer { background-color: #1F2937; }
+        
+        .flex > div {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            margin: 0 auto;
-            width: 1440px;
             align-items: center;
         }
-        header .logo, header .navigation a {
+        
+        header { padding: 20px 0; }
+        
+        .wrapper {
+            margin: 0 auto;
+            width: 70%;
+        }
+        header .logo {
             color: #f9faf8;
+            font-size: 24px;
+        }
+        
+        header .navigation a { padding: 0 10px; }
+        header .navigation a:last-child { padding: 0; }
+        
+        header .navigation a, .hero p {
+            color: #e5e7eb;
+            font-size: 18px;
             text-decoration: none;
-            padding: 0 10px;
         }
-        .hero {
-            padding: 4em 0;
-        }
+        .hero { padding: 4em 0; }
+        
         .hero h1 {
             font-size: 48px;
             font-weight: bolder;
             color: #f9faf8
         }
+        .hero button {
+            margin: 10px 0;
+            padding: 10px 30px;
+            background-color: #3882f6;
+            color: #f9faf8;
+            border-radius: 8px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .hero button:hover { background-color: #384af0; }
+        .hero button:active { background-color: #3235db; }
+        .hero2 { padding: 30px 0; }
+        .hero2 h1 { text-align: center; }
+        
+        .hero2 .wrapper section {
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3.5rem;
+        }
+        .hero2 .wrapper section figure {
+            flex-direction: column;
+            width: 150px;
+        }
+        
+        .hero2 .wrapper section figure img { border-radius: 10px; }
+        
+        .quote {
+            padding: 5rem 0;
+            background-color: #e5e7eb;
+        }
+        .quote section {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .quote blockquote { max-width: 60%; }
+        
+        .quote h3 {
+            font-size: 36px;
+            font-style: italic;
+            font-weight: lighter;
+            color: #1F2937;
+        }
+        
+        .quote span { float: right; }
+
+        .cta {
+            padding: 5rem 0;
+        }
+        .cta > div {
+            background-color: #3882f6;
+            padding: 4rem 0;
+            border-radius: 10px;
+        }
+        .cta > div section {
+            padding: 0 5rem;
+            color: #fff;
+        }
+        .cta > div .right button {
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            color: #fff;
+            padding: 5px 25px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            color: #fff;
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
-    <header>
+    <header class="flex">
         <div class="wrapper">
-            <div class="logo">
+            <section class="logo">
                 <h2>Header Logo</h2>
-            </div>
-            <div class="navigation">
+            </section>
+            <section class="navigation">
                 <a href="#">Header link one</a>
                 <a href="#">Header link two</a>
                 <a href="#">Header link three</a>
-            </div>
+            </section>
         </div>
     </header>
     <main>
-        <article class="hero">
+        <article class="hero flex">
             <div class="wrapper">
-                <div class="left">
+                <section class="left">
                     <h1>This website is awesome</h1>
                     <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast.</p>
                     <button>Sign up</button>
-                </div>
-                <div class="right">
-                    <img src="https://place-hold.it/400x200" alt="">
-                </div>
+                </section>
+                <section class="right">
+                    <img src="https://place-hold.it/600x300" alt="">
+                </section>
+            </div>
+        </article>
+        <article class="hero2">
+            <div class="wrapper">
+                <h1>Some Random information.</h1>
+                <section class="">
+                    <figure>
+                        <img src="https://place-hold.it/150x150" alt="">
+                        <figcaption>This is some subtext under an illustration or image</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://place-hold.it/150x150" alt="">
+                        <figcaption>This is some subtext under an illustration or image</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://place-hold.it/150x150" alt="">
+                        <figcaption>This is some subtext under an illustration or image</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="https://place-hold.it/150x150" alt="">
+                        <figcaption>This is some subtext under an illustration or image</figcaption>
+                    </figure>
+                </section>
+            </div>
+        </article>
+        <article class="quote">
+            <section class="wrapper">
+                <blockquote>
+                    <h3>This is an inspiring quote, or a testemonial from a customer.
+                    Maybe it's just filling up space, or maybe people will actually read it. Who knows? All i know is that it looks nice.</h3>
+                    <span>-Thor, God of Thunder</span>
+                </blockquote>
+            </section>
+        </article>
+        <article class="cta flex">
+            <div class="wrapper">
+                <section class="left">
+                    <h4>Call to action! It's time!</h4>
+                    <p>Sign up for our product by clicking that button right over there!</p>
+                </section>
+                <section class="right">
+                    <button>
+                        Sign up
+                    </button>
+                </section>
             </div>
         </article>
     </main>
     <footer>
-
+        <section class="wrapper">
+            <p>Copyright &copy; The Odin Project </p>
+        </section>
     </footer>
+    <script>
+        document.querySelector('footer p').innerHTML += new Date().getFullYear();
+    </script>
 </body>
 </html>
